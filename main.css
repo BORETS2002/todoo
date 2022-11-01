@@ -1,0 +1,111 @@
+.box{
+display: flex;
+}
+
+.big-boss {
+}
+.form {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.input {
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+   margin-right: 5px;
+}
+.btn-gaz {
+  margin-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: none;
+  border: 1px solid #0000ff;
+  color: #0000ff;
+}
+.list {
+}
+ 
+.bos-text{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.all-text {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #0000ff;
+
+}
+.all {
+  margin-right: 5px;
+  margin-left: 5px;
+
+}
+.unc-text {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #0000ff;
+
+
+}
+.uncopmleted {
+  margin-right: 5px;
+  margin-left: 5px;
+
+}
+.copm-text {
+  margin-right: 5px;
+  padding: 5px;
+  border: 1px solid #0000ff;
+ 
+
+
+}
+.copmleted {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.template {
+}
+.item {
+
+  list-style: none;
+  margin-bottom: 15px;
+  padding: 10px;
+width: 40%;
+margin-right: auto;
+margin-left: auto;
+border: 2px solid #0000ff;
+border-radius: 20px;
+
+
+}
+.son {
+}
+.chek {
+}
+.text {
+}
+.btn-del {
+  margin-left: 20px;
+ 
+  padding: 5px;
+  background: none;
+  border-radius: 10px;
+  border: 2px solid #ff0000;
+  color: #ff0000;
+}
+.btn-add {
+  padding: 5px;
+  background: none;
+  border-radius: 10px;
+  border: 2px solid #00ff0d;
+  color: #00ff15;
+}
