@@ -14,6 +14,8 @@ ElBtnFrom.textContent = "check"
 
 let initialId = 0;
 
+const localTodo = JSON.parse(window.localStorage.getItem("todos"))
+let todos  = localTodo || []
 
 
 function renderArray (todo , list)  {
@@ -28,30 +30,31 @@ function renderArray (todo , list)  {
   Elall.textContent = todo.length;
 
   //domga Chizish
-    todo.forEach(function(item , i ) {
+    todo.forEach(function(item ) {
     const elTemp = Templste.cloneNode(true);
  
-
+    
     elTemp.querySelector(".text").textContent = item.title;
     elTemp.querySelector(".btn-del").dataset.id  = item.id;
     elTemp.querySelector(".btn-add").dataset.id  = item.id;
     elTemp.querySelector(".chek").dataset.id  = item.id;   
-    qop.appendChild(elTemp);
+   
 
-    if(item.iscompleted == true){   
-// console.log("ssdfafaefaesfsaefdasfdsf");
- 
-      // elTemp.querySelector(".chek").checked = true;
-      // elTemp.querySelector(".text").textContent = "bosildi"
+
+    if(item.iscompleted ){   
+      console.log("ssdfafaefaesfsaefdasfdsf");
+      elTemp.querySelector(".chek").checked = true;
+      elTemp.querySelector(".text").textContent = "bosildi"
     }
 
+
+    qop.appendChild(elTemp);
     list.appendChild(qop)
 }); //domga Chizish
 }
+ 
 
 
-const localTodo = JSON.parse(window.localStorage.getItem("todos"))
-let todos  = localTodo || []
 renderArray(todos , ElList);
 
 let editingId;
@@ -106,10 +109,10 @@ Elform.addEventListener("submit", (evt)=> {
 if (evt.target.matches(".chek")){
 const DeldataId = Number(evt.target.dataset.id)
 const returtnId =  todos.find(function(todo){
-  return  todo.id   === DeldataId 
+  return  todo.id  === DeldataId 
  }) 
  
- returtnId.iscompleted = !returtnId.iscompleted
+ returtnId.iscompleted = !returtnId.iscompleted;
  console.log(returtnId);
  window.localStorage.setItem("todos", JSON.stringify( todos))
   renderArray(todos , ElList);
